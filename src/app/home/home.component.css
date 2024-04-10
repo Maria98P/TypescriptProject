@@ -1,0 +1,26 @@
+.car{
+  margin-left: auto;
+margin-right: auto;
+display: table;
+  
+  
+}
+h1,div{
+margin: 3vh;
+padding-left: 2vw;
+text-align: center;
+}
+.container{
+  position: relative;
+}
+text{
+text-align: center;
+position: absolute;
+}
+
+@media (max-width: 768px) { 
+  .car img {
+      width: 100%; 
+      object-fit: cover; 
+    }
+  }

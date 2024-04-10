@@ -1,0 +1,31 @@
+<h1> Products</h1>
+
+
+<div class="container text-center">
+    <div class="row">
+      <div class="col-sm-12 col-md-4" *ngFor="let product of products; let i = index">
+        <div class="card" style="width: 18rem;">
+          <img src="./assets/img/{{product.image}}" class="card-img-top" alt="A picture of a {{product.name}} set">
+          <div class="card-body">
+            <h5 class="card-title"> {{product.name}} </h5>
+            <p class="card-text"> {{product.price}} € </p>
+
+            <ng-template [ngIf]="product.availability">
+              <div>
+                <a routerLink="/productDetails/{{i}} " class="btn btn-primary">Details</a>
+                <br>
+                <br>
+                <a  (click)="onAddToCart()" routerLink="/cart" class="btn-primary btn"> Add to cart</a>
+
+              </div>
+            </ng-template>
+            <ng-template [ngIf]="!product.availability">
+              <div class="unavailable">Not available</div>
+            </ng-template>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,27 @@
+footer{
+    color: rgb(250, 246, 246);
+    background-color: black;
+    padding:1vh;
+    clear: both;
+    position: relative;
+    margin-top: 500px;
+ 
+
+  
+}
+figcaption{
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+ul{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+
+}
+p{
+    text-align: end;
+    margin: 1vw;
+}

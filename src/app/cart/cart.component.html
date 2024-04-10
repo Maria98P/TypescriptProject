@@ -1,0 +1,36 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">name</th>
+        <th scope="col">price</th>
+        <th scope="col">qtty</th>
+        <th scope="col">action</th>
+        <th scope="col">subtotal</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+
+        @for(product of cartItems; track product; let i = $index){
+            <tr>
+                <th>{{i +1}} </th>
+                <td> {{product.name}} </td>
+                <td>  {{product.price}} </td>
+                <td>   {{product.price}} </td>
+                <td> 
+                    <button class="btn btn-warning"> - </button> <br>
+                    <button class="btn btn-danger"> delete </button> <br>
+                    <button class="btn btn-primary"> + </button>
+                    
+                </td>
+                <td> {{product.price * product.qtty}} </td>
+            </tr>
+        }
+      
+      
+    </tbody>
+  </table>
+  <hr> 
+  <h2> Total: {{total}} </h2>
+  <div *ngIf="total>40">{{total - (total*.15)}}</div>
